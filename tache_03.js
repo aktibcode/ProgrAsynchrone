@@ -20,7 +20,7 @@ async function waitCall() {
       .then((response) => response.json())
       .then((response) => {
         console.log(JSON.stringify(response));
-      })
+      });
     // Simuler un échec de l'appel à l'API
     throw new Error("Erreur lors de la récupération des données de l'API");
   } catch (error) {
@@ -35,7 +35,7 @@ waitCall();
 Chainage Async/Await
 
 ---------------*/
-/*
+
 function wait(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
@@ -65,4 +65,4 @@ async function chainedAsyncFunction() {
   console.log("Fin de la chaîne d'appels asynchrones");
 }
 
-chainedAsyncFunction(); */
+chainedAsyncFunction();
